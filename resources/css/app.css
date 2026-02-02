@@ -1,0 +1,132 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-serif: 'Newsreader', ui-serif, Georgia, serif;
+}
+
+@layer base {
+    :root {
+        --ink: 17 20 24;
+        --paper: 245 242 236;
+        --sun: 221 131 25;
+        --teal: 34 128 118;
+        --line: 210 204 195;
+        --smoke: 120 126 134;
+        --card: 255 255 255;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        color: rgb(var(--ink));
+        background:
+            radial-gradient(1200px circle at 10% 10%, rgba(34, 128, 118, 0.12), transparent 45%),
+            radial-gradient(900px circle at 85% 5%, rgba(221, 131, 25, 0.18), transparent 40%),
+            linear-gradient(180deg, rgb(248 246 240) 0%, rgb(236 232 223) 100%);
+        min-height: 100vh;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--font-serif);
+        letter-spacing: -0.01em;
+    }
+
+    ::selection {
+        background: rgba(221, 131, 25, 0.25);
+    }
+}
+
+@layer components {
+    .container-shell {
+        @apply mx-auto w-full max-w-6xl px-5;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid rgb(var(--line));
+        box-shadow: 0 20px 50px rgba(17, 20, 24, 0.08);
+        backdrop-filter: blur(18px);
+    }
+
+    .chip {
+        @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium uppercase tracking-[0.12em];
+        background: rgba(34, 128, 118, 0.12);
+        color: rgb(var(--teal));
+    }
+
+    .soft-input {
+        @apply w-full rounded-2xl border border-[rgb(var(--line))] bg-white/70 px-4 py-3 text-sm focus:border-[rgb(var(--teal))] focus:outline-none focus:ring-2 focus:ring-[rgba(34,128,118,0.2)];
+    }
+}
+
+@layer utilities {
+    .text-ink {
+        color: rgb(var(--ink));
+    }
+
+    .text-smoke {
+        color: rgb(var(--smoke));
+    }
+
+    .bg-paper {
+        background-color: rgb(var(--paper));
+    }
+
+    .border-line {
+        border-color: rgb(var(--line));
+    }
+
+    .shadow-soft {
+        box-shadow: 0 12px 30px rgba(17, 20, 24, 0.1);
+    }
+
+    .bg-grid {
+        background-image:
+            linear-gradient(rgba(17, 20, 24, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(17, 20, 24, 0.06) 1px, transparent 1px);
+        background-size: 28px 28px;
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-up 0.8s ease-out both;
+    }
+
+    .animate-delay-1 {
+        animation-delay: 0.08s;
+    }
+
+    .animate-delay-2 {
+        animation-delay: 0.16s;
+    }
+
+    .animate-delay-3 {
+        animation-delay: 0.24s;
+    }
+
+    .article-body p {
+        margin-top: 1rem;
+    }
+}
