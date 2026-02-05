@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="max-w-4xl">
+    <div class="max-w-6xl">
         <h2 class="text-3xl font-semibold">Thêm bài viết</h2>
 
         <form method="post" action="{{ route('admin.posts.store') }}" enctype="multipart/form-data" class="mt-6 space-y-6 rounded-3xl border border-line bg-white/80 p-6">

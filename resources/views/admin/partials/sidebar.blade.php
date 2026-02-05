@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <nav class="space-y-2 text-sm">
+    <nav class="space-y-2 text-sm" style="margin: 20px 0;">
         <a href="{{ route('admin.dashboard') }}" class="block rounded-2xl px-4 py-2 {{ request()->routeIs('admin.dashboard') ? 'bg-[rgb(var(--ink))] text-[rgb(var(--paper))]' : 'border border-line' }}">
             Tổng quan
         </a>

@@ -30,7 +30,7 @@
 
             <div class="space-y-3 text-sm">
                 <p class="text-xs uppercase tracking-[0.3em] text-smoke">Liên hệ</p>
-                <p class="font-medium">Cửa hàng: 88 Nguyễn Trãi, Q.1, TP.HCM</p>
+                <p class="font-medium">Cửa hàng: 141 Trương Định, P. Tương Mai, TP. Hà Nội</p>
                 <p class="font-medium">Email: vntlaptop@gmail.com</p>
                 <p class="font-medium">Hotline: 0909 123 456</p>
             </div>

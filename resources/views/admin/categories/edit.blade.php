@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="max-w-2xl">
+    <div class="max-w-4xl">
         <h2 class="text-3xl font-semibold">Chỉnh sửa danh mục</h2>
 
         <form method="post" action="{{ route('admin.categories.update', $category) }}" class="mt-6 space-y-4 rounded-3xl border border-line bg-white/80 p-6">

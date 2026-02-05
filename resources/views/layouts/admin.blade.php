@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Admin - {{ config('app.name', 'VNT Laptop') }}</title>
+        <link rel="icon" href="{{ asset('favicon-admin.ico') }}" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,15 +15,15 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="bg-paper text-ink">
+    <body class="text-ink">
         <div class="min-h-screen lg:flex">
-            <aside class="hidden w-72 border-r border-line bg-white/80 p-6 lg:block">
+            <aside class="hidden w-72 p-6 lg:block">
                 @include('admin.partials.sidebar')
             </aside>
 
             <div class="flex-1">
-                <header class="border-b border-line bg-white/80 px-6 py-4">
-                    <div class="flex flex-wrap items-center justify-between gap-4">
+                <header class="border-b border-line px-6 py-4">
+                    <div class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4">
                         <div>
                             <p class="text-xs uppercase tracking-[0.4em] text-smoke">Admin panel</p>
                             <h1 class="text-2xl font-semibold">VNT Laptop</h1>
@@ -40,13 +41,15 @@
                 </header>
 
                 <main class="p-6">
-                    @if (session('success'))
-                        <div class="mb-6 rounded-2xl border border-line bg-[rgba(34,128,118,0.12)] px-4 py-3 text-sm text-[rgb(var(--teal))]">
-                            {{ session('success') }}
-                        </div>
-                    @endif
+                    <div class="mx-auto w-full max-w-6xl">
+                        @if (session('success'))
+                            <div class="mb-6 rounded-2xl border border-line bg-[rgba(34,128,118,0.12)] px-4 py-3 text-sm text-[rgb(var(--teal))]">
+                                {{ session('success') }}
+                            </div>
+                        @endif
 
-                    @yield('content')
+                        @yield('content')
+                    </div>
                 </main>
             </div>
         </div>

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-    <div class="max-w-4xl">
+    <div class="max-w-6xl">
         <h2 class="text-3xl font-semibold">Chỉnh sửa bài viết</h2>
 
         @php

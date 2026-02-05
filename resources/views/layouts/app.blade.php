@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="VNT Laptop - blog công nghệ và tư vấn chọn laptop đúng nhu cầu." />
         <title>{{ config('app.name', 'VNT Laptop') }}</title>
+        <link rel="icon" href="{{ asset('favicon-admin.ico') }}" type="image/x-icon" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
